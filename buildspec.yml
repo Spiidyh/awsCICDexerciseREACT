@@ -1,4 +1,8 @@
 phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+      commands:
   pre-build:
     commands:
       - npm install
@@ -6,4 +10,10 @@ phases:
       commands:
         - npm run build
       post-build:
-        - aws s3 cp ./build s3://samuli-cb-bucket --recursive
+        commands:
+          - aws s3 cp ./build s3://samuli-cb-bucket --recursive
+        artifacts:
+          files:
+            - index.js
+            - package.json
+            - node_modules/**/*
