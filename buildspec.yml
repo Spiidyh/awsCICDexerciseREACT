@@ -1,0 +1,9 @@
+phases:
+  pre-build:
+    commands:
+      - npm install
+    build:
+      commands:
+        - npm run build
+      post-build:
+        - aws s3 cp ./build s3://samuli-cb-bucket --recursive
