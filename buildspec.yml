@@ -1,9 +1,9 @@
 pre-build:
     commands:
       - npm install
-    build:
+build:
       commands:
         - npm run build
-      post-build:
+post-build:
         commands:
-          - aws s3 sync build/ s3://samuli-cb-bucket --recursive
+          - aws s3 sync build/ s3://samuli-cb-bucket
