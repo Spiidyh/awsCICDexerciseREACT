@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+![Node.js CI](https://github.com/Spiidyh/awsCICDexerciseREACT/workflows/Node.js%20CI/badge.svg)
 ## Available Scripts
 
 In the project directory, you can run:
