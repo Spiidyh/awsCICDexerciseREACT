@@ -17,8 +17,3 @@ phases:
       post-build:
         commands:
           - aws s3 cp ./build s3://samuli-cb-bucket --recursive
-        artifacts:
-          files:
-            - index.js
-            - package.json
-            - node_modules/**/*
